@@ -9,6 +9,9 @@
 # dependencies
 /node_modules
 
+# secrets
+site-config.ts
+
 # IDEs and editors
 /.idea
 .project

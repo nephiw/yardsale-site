@@ -1,0 +1,17 @@
+<agm-map [latitude]="lat" 
+         [longitude]="lng"
+         [zoom]="zoom"
+         [mapDraggable]="false"
+         [disableDefaultUI]="false"
+         [scrollwheel]="false"
+         [zoomControl]="false">
+  <agm-marker *ngFor="let site of sites; let idx = index"
+              [latitude]="site.lat"
+              [longitude]="site.lng"
+              [label]="idx | toString"
+              (markerClick)="markerClicked(infoWindow)">
+    <agm-info-window #infoWindow>
+      {{ site.address }}
+    </agm-info-window>
+  </agm-marker>
+</agm-map>
