@@ -42,6 +42,16 @@ export class SitesService {
         address: '9210 E 107th Pl',
         lat: 39.893537,
         lng: -104.879554
+      },
+      {
+        address: '9291 E 107th Pl',
+        lat: 39.893311,
+        lng: -104.878277
+      },
+      {
+        address: '9303 E 108th Ave',
+        lat: 39.893822,
+        lng: -104.877396
       }
     ];
   }

@@ -2,9 +2,11 @@ import {
   Component,
   ViewChildren,
   QueryList,
-  OnDestroy
+  OnDestroy,
+  ViewChild,
+  HostListener
 } from '@angular/core';
-import { AgmInfoWindow, AgmMarker } from '@agm/core';
+import { AgmInfoWindow, AgmMarker, AgmMap } from '@agm/core';
 import { SitesService, Site } from '../sites.service';
 
 @Component({
@@ -20,6 +22,8 @@ export class LocationsComponent implements OnDestroy {
   public sites: Site[] = this.siteService.getAllSites();
   public previousWindow: AgmInfoWindow;
 
+  @ViewChild(AgmMap) public map: AgmMap;
+
   constructor(private siteService: SitesService) {}
 
   public markerClicked(infoWindow: AgmInfoWindow): void {
@@ -31,5 +35,15 @@ export class LocationsComponent implements OnDestroy {
 
   public ngOnDestroy(): void {
     this.previousWindow = null;
+  }
+
+  @HostListener('window:resize')
+  onWindowResize() {
+    this.map.triggerResize().then(() => {
+      // this.map._mapsWrapper.setCenter({ 
+      //   lat: this.lat,
+      //   lng: this.lng
+      // });
+    });
   }
 }

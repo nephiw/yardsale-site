@@ -4,3 +4,10 @@ agm-map {
   max-width: 600px;
   margin: 0 auto;
 }
+
+@media (max-width : 600px) {
+  agm-map {
+    width: calc(100vw - 60px);
+    height: calc(100vw - 60px);
+  }
+}

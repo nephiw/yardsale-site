@@ -1,0 +1,22 @@
+.header img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.main-container {
+    max-width: 630px;
+    padding: 15px 30px 0 30px;
+    margin: 0 auto;
+    background-color: #E2EDED;   
+    box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2), 
+                0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.footer {
+    margin: 30px -30px 0 -30px;
+}
+
+.footer img {
+    width: 100%;
+}

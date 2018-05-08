@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face { 
+    font-family: 'LibelSuit'; 
+    src: url('assets/fonts/libelsuit.woff') format('woff'),  
+         url('assets/fonts/libelsuit.woff2') format('woff2'),  
+         url('assets/fonts/libelsuit.ttf') format('truetype'); 
+}
+
+body {
+    background-color: #FFF;
+    margin: 0;
+    color: #262626;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body h1, body h2 {
+    font-family: LibelSuit;
+}
