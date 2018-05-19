@@ -52,6 +52,21 @@ export class SitesService {
         address: '9303 E 108th Ave',
         lat: 39.893822,
         lng: -104.877396
+      },
+      {
+        address: '9248 E 109th Ave',
+        lat: 39.895333,
+        lng: -104.876635
+      },
+      {
+        address: '9478 E. 108th Ave',
+        lat: 39.892656,
+        lng: -104.875901
+      },
+      {
+        address: '10736 Beeler St',
+        lat: 39.892992,
+        lng: -104.880421
       }
     ];
   }
