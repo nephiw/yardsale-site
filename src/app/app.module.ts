@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule } from 'angularfire2';
 
 import { environment } from '../environments/environment';
 
@@ -17,7 +19,9 @@ import { ToStringPipe } from './to-string.pipe';
     BrowserModule,
     CommonModule,
     FormsModule,
-    AgmCoreModule.forRoot({ apiKey: environment.mapsKey })
+    AgmCoreModule.forRoot({ apiKey: environment.mapsKey }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   declarations: [
     AppComponent,

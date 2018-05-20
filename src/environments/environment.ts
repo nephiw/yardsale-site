@@ -7,5 +7,6 @@ import { SiteConfig } from '../../site-config';
 
 export const environment = {
   production: false,
-  mapsKey: SiteConfig.DevMapsKey
+  mapsKey: SiteConfig.DevMapsKey,
+  firebase: SiteConfig.FirebaseConfig
 };

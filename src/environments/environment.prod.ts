@@ -2,5 +2,6 @@ import { SiteConfig } from '../../site-config';
 
 export const environment = {
   production: true,
-  mapsKey: SiteConfig.ProMapsKey
+  mapsKey: SiteConfig.ProMapsKey,
+  firebase: SiteConfig.FirebaseConfig
 };
