@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { LocationsComponent } from './locations/locations.component';
 import { SitesService } from './sites.service';
 import { ToStringPipe } from './to-string.pipe';
+import { DetailComponent } from './locations/detail.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ToStringPipe } from './to-string.pipe';
   declarations: [
     AppComponent,
     LocationsComponent,
-    ToStringPipe
+    ToStringPipe,
+    DetailComponent
   ],
   providers: [SitesService],
   bootstrap: [AppComponent]

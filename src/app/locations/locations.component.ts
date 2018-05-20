@@ -21,21 +21,29 @@ export class LocationsComponent implements OnDestroy {
   public zoom = 16;
 
   public sites$: Observable<Site[]> = this.siteService.getAllSites();
+  public site: Site;
   public previousWindow: AgmInfoWindow;
 
   @ViewChild(AgmMap) public map: AgmMap;
 
   constructor(private siteService: SitesService) {}
 
-  public markerClicked(infoWindow: AgmInfoWindow): void {
+  public markerClicked(infoWindow: AgmInfoWindow, site: Site): void {
     if (this.previousWindow) {
       this.previousWindow.close();
     }
     this.previousWindow = infoWindow;
+    this.site = site;
   }
 
   public ngOnDestroy(): void {
     this.previousWindow = null;
+  }
+
+  public onClose(site): void {
+    if (this.site === site) {
+      this.site = null;
+    }
   }
 
   @HostListener('window:resize')

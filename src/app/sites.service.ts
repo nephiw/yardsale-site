@@ -19,4 +19,5 @@ export interface Site {
   lat: number;
   lng: number;
   address: string;
+  items: string;
 }

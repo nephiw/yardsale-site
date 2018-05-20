@@ -10,10 +10,11 @@
                 [latitude]="site.lat"
                 [longitude]="site.lng"
                 [label]="idx | toString"
-                (markerClick)="markerClicked(infoWindow)">
-      <agm-info-window #infoWindow>
+                (markerClick)="markerClicked(infoWindow, site)">
+      <agm-info-window #infoWindow (infoWindowClose)="onClose(site)">
         {{ site.address }}
       </agm-info-window>
     </agm-marker>
   </agm-map>
 </div>
+<bc-detail [site]="site"></bc-detail>
