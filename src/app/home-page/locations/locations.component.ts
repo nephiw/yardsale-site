@@ -7,7 +7,7 @@ import {
   HostListener
 } from '@angular/core';
 import { AgmInfoWindow, AgmMarker, AgmMap } from '@agm/core';
-import { SitesService, Site } from '../sites.service';
+import { SitesService, Site } from '../sites/sites.service';
 import { Observable } from 'rxjs';
 
 @Component({

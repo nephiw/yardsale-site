@@ -9,30 +9,25 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
-import { LocationsComponent } from './locations/locations.component';
-import { SitesService } from './sites.service';
-import { ToStringPipe } from './to-string.pipe';
-import { DetailComponent } from './locations/detail.component';
-import { SignupLinkComponent } from './signup-link/signup-link.component';
-
+import { AppRoutingModule } from './app-routing.module';
+import { HomePageModule } from './home-page/home-page.module';
+import { SignupPageModule } from './signup-page/signup-page.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
+    AppRoutingModule,
     AgmCoreModule.forRoot({ apiKey: environment.mapsKey }),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HomePageModule,
+    SignupPageModule
   ],
   declarations: [
-    AppComponent,
-    LocationsComponent,
-    ToStringPipe,
-    DetailComponent,
-    SignupLinkComponent
+    AppComponent
   ],
-  providers: [SitesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
