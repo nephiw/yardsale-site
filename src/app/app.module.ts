@@ -13,7 +13,7 @@ import { LocationsComponent } from './locations/locations.component';
 import { SitesService } from './sites.service';
 import { ToStringPipe } from './to-string.pipe';
 import { DetailComponent } from './locations/detail.component';
-import { SignupComponent } from './signup/signup.component';
+import { SignupLinkComponent } from './signup-link/signup-link.component';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import { SignupComponent } from './signup/signup.component';
     LocationsComponent,
     ToStringPipe,
     DetailComponent,
-    SignupComponent
+    SignupLinkComponent
   ],
   providers: [SitesService],
   bootstrap: [AppComponent]

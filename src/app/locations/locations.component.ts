@@ -49,7 +49,7 @@ export class LocationsComponent implements OnDestroy {
   @HostListener('window:resize')
   onWindowResize() {
     this.map.triggerResize().then(() => {
-      // this.map._mapsWrapper.setCenter({ 
+      // this.map._mapsWrapper.setCenter({
       //   lat: this.lat,
       //   lng: this.lng
       // });
