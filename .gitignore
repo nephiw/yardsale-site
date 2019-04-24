@@ -11,6 +11,7 @@
 
 # secrets
 site-config.ts
+**/*.cache
 
 # IDEs and editors
 /.idea
