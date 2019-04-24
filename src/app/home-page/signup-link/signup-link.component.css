@@ -7,8 +7,8 @@
   .signup {
     width: 60%;
     position: absolute;
-    right: 30px;
-    text-align: right;
-    margin-top: 30px;
+    left: 15px;
+    text-align: left;
+    margin-top: 15px;
   }
 }
