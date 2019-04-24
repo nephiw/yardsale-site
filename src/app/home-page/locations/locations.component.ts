@@ -7,7 +7,7 @@ import {
   HostListener
 } from '@angular/core';
 import { AgmInfoWindow, AgmMarker, AgmMap } from '@agm/core';
-import { SitesService, Site } from '../sites.service';
+import { SitesService, Site } from '../sites/sites.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -49,7 +49,7 @@ export class LocationsComponent implements OnDestroy {
   @HostListener('window:resize')
   onWindowResize() {
     this.map.triggerResize().then(() => {
-      // this.map._mapsWrapper.setCenter({ 
+      // this.map._mapsWrapper.setCenter({
       //   lat: this.lat,
       //   lng: this.lng
       // });

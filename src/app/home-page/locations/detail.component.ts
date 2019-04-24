@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Site } from '../sites.service';
+import { Site } from '../sites/sites.service';
 
 @Component({
   selector: 'bc-detail',
